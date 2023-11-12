@@ -65,17 +65,40 @@
       </nav>
       <!-- Page content-->
       <section class="py-5">
-        <div class="card container mt-5" style="width: 18rem">
-          <div class="card-body">
-            <h5 class="card-title">CONTACT INFO</h5>
-            <p class="card-text">EMAIL - ggurunathan2003@gmail.com</p>
-            <a
-              href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJfrKjBDkgZpLxcXtlkdWcrZFRXXVTmkwKHJNGtqBTzVnMfnbpJlnhMfJWznVBGfqJpjKcg"
-              class="btn btn-primary"
-              >click here</a
-            >
-          </div>
+       <div class="container px-5 my-5">
+    <form id="contactForm" data-sb-form-api-token="0898ca3c-1fc2-4d72-aa63-b01b3c848f85">
+        <div class="form-floating mb-3">
+            <input class="form-control" id="yourName" type="text" placeholder="your name" data-sb-validations="required" />
+            <label for="yourName">your name</label>
+            <div class="invalid-feedback" data-sb-feedback="yourName:required">your name is required.</div>
         </div>
+        <div class="form-floating mb-3">
+            <input class="form-control" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required,email" />
+            <label for="emailAddress">Email Address</label>
+            <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
+            <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
+        </div>
+        <div class="form-floating mb-3">
+            <textarea class="form-control" id="messsage" type="text" placeholder="messsage" style="height: 10rem;" data-sb-validations="required"></textarea>
+            <label for="messsage">messsage</label>
+            <div class="invalid-feedback" data-sb-feedback="messsage:required">messsage is required.</div>
+        </div>
+        <div class="d-none" id="submitSuccessMessage">
+            <div class="text-center mb-3">
+                <div class="fw-bolder">Form submission successful!</div>
+                <p>To activate this form, sign up at</p>
+                <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+            </div>
+        </div>
+        <div class="d-none" id="submitErrorMessage">
+            <div class="text-center text-danger mb-3">Error sending message!</div>
+        </div>
+        <div class="d-grid">
+            <button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
       </section>
     </main>
     <!-- Footer-->
